@@ -12,6 +12,11 @@ $(document).ready(function(){
     });
   });
   $(document).ready(function(){
+    // Check if dark mode is enabled by default
+    if ($('body').hasClass('dark-theme')) {
+      $('#themeSwitch').prop('checked', true); // Check the theme switch checkbox
+    }
+  
     // Theme switch functionality
     $('#themeSwitch').change(function(){
       if ($(this).prop('checked')) {
@@ -20,6 +25,7 @@ $(document).ready(function(){
         $('body').removeClass('dark-theme');
       }
     });
-  })
+  });
+  
 
 
